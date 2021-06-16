@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div id="app">
+        <h1> Checkout: Skateboard</h1>
+        Pick a deck:
+        <br>
+        <img class="image" v-bind:src="computedDeckImage"><br>
+        <input value= "oak" type="radio" v-model="deck_type">Oak
+        <input value= "pine" type= "radio" v-model="deck_type">Pine
+        <input value= "wood" type= "radio" v-model="deck_type">Wood
+        <br><br>
+
+        Pick your wheel:
+        <br>
+        <img class="image" v-bind:src="computedWheelImage"><br>
+        <input value= "yellow" type="radio" v-model="wheel_type"> Yellow
+        <input value= "red" type="radio" v-model="wheel_type"> Red
+        <input value= "black" type="radio" v-model="wheel_type"> Black
+        <br><br>
+        Cost: ${{ cost }}
+        <br>
+        Tax: $ {{ tax }}
+        <br>
+        Total: $ {{ computedCost }}
+        <br>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+</html>
